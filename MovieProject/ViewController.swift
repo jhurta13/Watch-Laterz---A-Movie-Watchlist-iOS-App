@@ -11,6 +11,9 @@
 import UIKit
 import SafariServices
 
+public var testVar = ""
+
+
 class ViewController: UIViewController, UITextViewDelegate, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     
     @IBOutlet var table: UITableView!
@@ -25,6 +28,9 @@ class ViewController: UIViewController, UITextViewDelegate, UITableViewDataSourc
         table.delegate = self
         table.dataSource = self
         field.delegate = self
+        table.rowHeight = 200
+        
+        
         
     }
     
@@ -90,22 +96,61 @@ class ViewController: UIViewController, UITextViewDelegate, UITableViewDataSourc
         return movies.count
     }
     
+        
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.identifier, for: indexPath) as! MovieTableViewCell
+        
         cell.configure(with: movies[indexPath.row])
+        
+        
+        let button = UIButton(type: .roundedRect)
+        button.setTitle("Add", for: .normal)
+        button.sizeToFit()
+      
+        button.addTarget(self, action: #selector(accessoryButtonTapped(sender:)), for: .touchUpInside)
+        button.tag = indexPath.row
+        
+        cell.accessoryView = button
+        cell.accessoryView?.isUserInteractionEnabled = true
+        
+          
+       
         return cell
+
     }
+    @objc func accessoryButtonTapped(sender : UIButton){
+            print(sender.tag)
+        print(movies[sender.tag])
+            print("Tapped")
+        }
+
+        
+
     
+    //func addButtonAction(sender: UIButton){
+       // if addButton.isTouchInside {
+           // print("2")
+      //  }
+        
+    //}
+    
+    
+    /*
+    //IMDB SAFARI LOAD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
         //show movie details
-        let url = "https://www.imdb.com/title/\(movies[indexPath.row].imdbID)/"
-        let vc = SFSafariViewController(url: URL(string: url)!)
-        present(vc, animated: true)
+       // let url = "https://www.imdb.com/title/\(movies[indexPath.row].imdbID)/"
+       // let vc = SFSafariViewController(url: URL(string: url)!)
+        //present(vc, animated: true)
         
     }
-
+     */
+    
+   
 }
 
 struct MovieResult: Codable {
@@ -124,5 +169,7 @@ struct Movie: Codable {
         case Title, Year, imdbID, _Type = "Type", Poster
 
     }
+    
+
     
 }
