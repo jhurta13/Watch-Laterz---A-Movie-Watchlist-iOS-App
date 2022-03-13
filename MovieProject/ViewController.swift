@@ -24,12 +24,13 @@ class ViewController: UIViewController, UITextViewDelegate, UITableViewDataSourc
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        table.register(MovieTableViewCell.nib(), forCellReuseIdentifier: MovieTableViewCell.identifier)
+        
+        
         table.delegate = self
         table.dataSource = self
         field.delegate = self
         table.rowHeight = 200
-        
+        table.register(UITableViewCell.self, forCellReuseIdentifier: "DefaultCell")
         
         
     }
@@ -126,16 +127,6 @@ class ViewController: UIViewController, UITextViewDelegate, UITableViewDataSourc
             print("Tapped")
         }
 
-        
-
-    
-    //func addButtonAction(sender: UIButton){
-       // if addButton.isTouchInside {
-           // print("2")
-      //  }
-        
-    //}
-    
     
     /*
     //IMDB SAFARI LOAD
@@ -149,6 +140,17 @@ class ViewController: UIViewController, UITextViewDelegate, UITableViewDataSourc
         
     }
      */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        if let detailViewController = segue.destination as? DetailViewController {
+           if let indexPath = self.table.indexPathForSelectedRow {
+               detailViewController.movie = movies[indexPath.row]
+           }
+       }
+    }
+    
     
    
 }

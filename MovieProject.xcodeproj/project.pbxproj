@@ -14,7 +14,6 @@
 		3D712F2727D61C4800C09B57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D712F2627D61C4800C09B57 /* Assets.xcassets */; };
 		3D712F2A27D61C4800C09B57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D712F2827D61C4800C09B57 /* LaunchScreen.storyboard */; };
 		3D712F3327D7290600C09B57 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D712F3127D7290600C09B57 /* MovieTableViewCell.swift */; };
-		3D712F3427D7290600C09B57 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D712F3227D7290600C09B57 /* MovieTableViewCell.xib */; };
 		3D94905027DCAAF000C3C530 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D94904F27DCAAF000C3C530 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +27,6 @@
 		3D712F2927D61C4800C09B57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D712F2B27D61C4800C09B57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D712F3127D7290600C09B57 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
-		3D712F3227D7290600C09B57 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		3D94904F27DCAAF000C3C530 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,7 +69,6 @@
 				3D712F2827D61C4800C09B57 /* LaunchScreen.storyboard */,
 				3D712F2B27D61C4800C09B57 /* Info.plist */,
 				3D712F3127D7290600C09B57 /* MovieTableViewCell.swift */,
-				3D712F3227D7290600C09B57 /* MovieTableViewCell.xib */,
 			);
 			path = MovieProject;
 			sourceTree = "<group>";
@@ -136,7 +133,6 @@
 			files = (
 				3D712F2A27D61C4800C09B57 /* LaunchScreen.storyboard in Resources */,
 				3D712F2727D61C4800C09B57 /* Assets.xcassets in Resources */,
-				3D712F3427D7290600C09B57 /* MovieTableViewCell.xib in Resources */,
 				3D712F2527D61C4700C09B57 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
