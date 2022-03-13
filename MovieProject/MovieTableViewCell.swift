@@ -12,6 +12,7 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet var movieTitleLabel: UILabel!
     @IBOutlet var movieYearLabel: UILabel!
     @IBOutlet var moviePosterImageView: UIImageView!
+    @IBOutlet var moviePlot: UILabel!
 
 
     override func awakeFromNib() {
@@ -36,5 +37,6 @@ class MovieTableViewCell: UITableViewCell {
         if let data = try? Data(contentsOf: URL(string: url)!){
             self.moviePosterImageView.image = UIImage(data: data)
         }
+        
     }
 }

@@ -20,6 +20,9 @@ class ViewController: UIViewController, UITextViewDelegate, UITableViewDataSourc
     @IBOutlet var field: UITextField!
     
     var movies = [Movie]()
+    
+    
+    
 
 
     override func viewDidLoad() {
@@ -68,7 +71,9 @@ class ViewController: UIViewController, UITextViewDelegate, UITableViewDataSourc
                 print("error")
             }
             
-            guard let finalResult = result else {
+            guard let finalResult = result
+            
+            else {
                 return
             }
             
@@ -81,8 +86,8 @@ class ViewController: UIViewController, UITextViewDelegate, UITableViewDataSourc
             //Refresh table
             DispatchQueue.main.async {
                 self.table.reloadData()
+                
             }
-            
             
             
             
@@ -90,6 +95,9 @@ class ViewController: UIViewController, UITextViewDelegate, UITableViewDataSourc
         
         
     }
+    
+    
+    
     
     //Table
     
@@ -116,7 +124,7 @@ class ViewController: UIViewController, UITextViewDelegate, UITableViewDataSourc
         cell.accessoryView = button
         cell.accessoryView?.isUserInteractionEnabled = true
         
-          
+    
        
         return cell
 
@@ -126,7 +134,7 @@ class ViewController: UIViewController, UITextViewDelegate, UITableViewDataSourc
         print(movies[sender.tag])
             print("Tapped")
         }
-
+   
     
     /*
     //IMDB SAFARI LOAD
@@ -167,11 +175,13 @@ struct Movie: Codable {
     let _Type: String
     let Poster: String
     
+    
     private enum CodingKeys: String, CodingKey {
-        case Title, Year, imdbID, _Type = "Type", Poster
+        case Title, Year,  imdbID, _Type = "Type", Poster
 
     }
     
 
     
 }
+
