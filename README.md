@@ -2,7 +2,7 @@
 
 ## App Features: 
 
-- **Search:** Search functionality was implemented for users to be able to search for movies through text field input. The OMDB API was used to be able to fetch movie results using an online movie database. Search results in JSON format were then decoded and displayed on a table view as individual cells. 
+-  **Search:** Search functionality was implemented for users to be able to search for movies through text field input. The OMDB API was used to be able to fetch movie results using an online movie database. Search results in JSON format were then decoded and displayed on a table view as individual cells. 
 
 - **Favorites:** Favorites functionality was implemented so users would be able to add their favorite movies and shows returned from the search query to a favorite list. 
 Safari View: Safari view controller implementation was used for users to be able to learn more about movie results by loading a Safari window linked to the IMDB details page for the selected movie. 
